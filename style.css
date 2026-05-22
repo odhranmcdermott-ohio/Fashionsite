@@ -4,108 +4,130 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Georgia, serif;
-  background: #111111;
-  color: #e8e0d5;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  font-family: Georgia, serif;
+  background: #111;
+  color: #f3e9dc;
+}
+
+/* Header */
 header {
-  background: #0a0a0a;
-  padding: 25px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #3b2b24;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
 }
 
 header h1 {
   font-size: 28px;
-  letter-spacing: 2px;
-  color: #e8e0d5;
+  color: #f3e9dc;
+  letter-spacing: 1px;
 }
 
 nav a {
-  color: #e8e0d5;
+  color: #f3e9dc;
   text-decoration: none;
   margin-left: 25px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 nav a:hover {
-  color: #a55a2a;
+  color: #c86c35;
 }
 
+/* Hero section with your uploaded image */
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)),
+    url("IMG_2442.jpeg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding: 80px;
+  padding: 140px 80px 80px;
 }
 
 .hero-text {
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .season {
-  color: #a55a2a;
+  color: #d97a3a;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  font-size: 16px;
 }
 
 .hero h2 {
-  font-size: 58px;
+  font-size: 64px;
   line-height: 1.05;
   margin-bottom: 20px;
+  color: #fff4ea;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
-  color: #d6c7b8;
+  color: #f0ddd0;
   margin-bottom: 30px;
 }
 
 .button {
   display: inline-block;
-  background: #a55a2a;
+  background: #c86c35;
   color: #111;
   padding: 14px 28px;
   text-decoration: none;
   font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background: #e3874f;
+}
+
+/* Sections */
+.about,
+.collection,
+footer {
+  background: #111;
 }
 
 .about,
-.collection,
-.mood {
-  padding: 70px 50px;
+.collection {
+  padding: 80px 50px;
   text-align: center;
 }
 
 .about h2,
-.collection h2,
-.mood h2 {
-  font-size: 38px;
+.collection h2 {
+  font-size: 42px;
   margin-bottom: 20px;
-  color: #e8e0d5;
+  color: #f3e9dc;
 }
 
-.about p,
-.mood p {
-  max-width: 800px;
+.about p {
+  max-width: 850px;
   margin: auto;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.7;
-  color: #c9b9aa;
+  color: #d7c2b3;
 }
 
+/* Collection cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -115,72 +137,71 @@ nav a:hover {
 
 .card {
   background: #1b1b1b;
-  border: 1px solid #3b2b24;
-  padding-bottom: 25px;
+  border: 1px solid #5b3a2e;
+  padding: 30px 20px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: #a55a2a;
-}
-
-.image {
-  height: 260px;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
-}
-
-.top {
-  background-image: url("https://images.unsplash.com/photo-1523398002811-999ca8dec234");
-}
-
-.balaclava {
-  background-image: url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f");
-}
-
-.bag {
-  background-image: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff");
-}
-
-.scarf {
-  background-image: url("https://images.unsplash.com/photo-1516762689617-e1cffcef479d");
+  border-color: #c86c35;
 }
 
 .card h3 {
   font-size: 24px;
   margin-bottom: 12px;
-  color: #e8e0d5;
+  color: #f3e9dc;
 }
 
 .card p {
-  padding: 0 20px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
-  color: #c9b9aa;
+  color: #d7c2b3;
 }
 
+/* Footer */
 footer {
-  background: #0a0a0a;
   padding: 25px;
   text-align: center;
-  color: #8d8178;
+  color: #9d8c81;
   border-top: 1px solid #3b2b24;
 }
 
+/* Mobile */
 @media screen and (max-width: 900px) {
   header {
     flex-direction: column;
+    gap: 12px;
+    padding: 18px 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 14px;
   }
 
   .hero {
-    padding: 40px;
+    padding: 160px 30px 80px;
   }
 
   .hero h2 {
-    font-size: 40px;
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 18px;
   }
 
   .grid {
