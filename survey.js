@@ -25,7 +25,8 @@ const counts = {
   5: document.getElementById("count5")
 };
 
-let ratings = JSON.parse(localStorage.getItem("collectionRatings")) || [5, 4, 5, 4, 3, 5, 4];
+/* starts completely fresh */
+let ratings = JSON.parse(localStorage.getItem("collectionRatings")) || [];
 
 starButtons.forEach(button => {
   button.addEventListener("click", () => {
@@ -66,7 +67,7 @@ function showResults() {
 
   const voteCount = ratings.length;
   const sum = ratings.reduce((total, rating) => total + rating, 0);
-  const average = (sum / voteCount).toFixed(1);
+  const average = voteCount > 0 ? (sum / voteCount).toFixed(1) : "0.0";
 
   yourRating.textContent = `Your rating: ${selectedRating} out of 5 stars`;
   averageRating.textContent = `Average rating: ${average} out of 5 stars`;
@@ -74,7 +75,7 @@ function showResults() {
 
   for (let i = 1; i <= 5; i++) {
     const count = ratings.filter(rating => rating === i).length;
-    const percent = (count / voteCount) * 100;
+    const percent = voteCount > 0 ? (count / voteCount) * 100 : 0;
 
     bars[i].style.width = percent + "%";
     counts[i].textContent = count;
