@@ -1,0 +1,156 @@
+.survey-page {
+  min-height: 100vh;
+  padding: 150px 40px 80px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.93)),
+    url("/Fashionsite/IMG_2442.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.survey-box {
+  max-width: 850px;
+  margin: auto;
+  background: rgba(10, 10, 10, 0.88);
+  border: 1px solid #5b3a2e;
+  padding: 50px;
+  text-align: center;
+}
+
+.survey-box h2 {
+  font-size: 54px;
+  color: #fff4ea;
+  margin-bottom: 18px;
+}
+
+.survey-intro {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #d7c2b3;
+  margin-bottom: 30px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.stars button {
+  background: none;
+  border: none;
+  color: #5b3a2e;
+  font-size: 52px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.stars button:hover,
+.stars button.active {
+  color: #d9894f;
+  transform: scale(1.12);
+}
+
+#ratingText {
+  font-size: 18px;
+  color: #d7c2b3;
+  margin-bottom: 25px;
+}
+
+#submitRating {
+  background: #b85f2d;
+  color: #111;
+  border: none;
+  padding: 14px 32px;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+#submitRating:hover {
+  background: #e08345;
+}
+
+.results {
+  margin-top: 45px;
+  text-align: left;
+  border-top: 1px solid #5b3a2e;
+  padding-top: 35px;
+}
+
+.results h3 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #f3e9dc;
+}
+
+.results p {
+  font-size: 18px;
+  color: #d7c2b3;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.bar-section {
+  margin-top: 30px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 35px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #f3e9dc;
+}
+
+.bar {
+  height: 22px;
+  background: #1b1b1b;
+  border: 1px solid #5b3a2e;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  width: 0%;
+  background: #b85f2d;
+  transition: 0.4s;
+}
+
+.note {
+  margin-top: 30px;
+  font-size: 14px !important;
+  color: #9d8c81 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .survey-page {
+    padding: 160px 22px 60px;
+  }
+
+  .survey-box {
+    padding: 30px;
+  }
+
+  .survey-box h2 {
+    font-size: 40px;
+  }
+
+  .stars button {
+    font-size: 42px;
+  }
+
+  .bar-row {
+    grid-template-columns: 70px 1fr 25px;
+    gap: 10px;
+  }
+}
