@@ -6,7 +6,7 @@ const highestBidderText = document.getElementById("highestBidder");
 const bidMessage = document.getElementById("bidMessage");
 const bidList = document.getElementById("bidList");
 
-let bids = JSON.parse(localStorage.getItem("artBids")) || [];
+let bids = JSON.parse(localStorage.getItem("artBidsFresh")) || [];
 
 displayBids();
 
@@ -14,12 +14,17 @@ bidForm.addEventListener("submit", function(event) {
   event.preventDefault();
 
   const bidderName = bidderNameInput.value.trim();
-  const bidAmount = Number(bidAmountInput.value);
+  const bidAmount = parseFloat(bidAmountInput.value);
 
   const highestBid = getHighestBid();
 
   if (bidderName === "") {
     bidMessage.textContent = "Please enter your name.";
+    return;
+  }
+
+  if (isNaN(bidAmount) || bidAmount <= 0) {
+    bidMessage.textContent = "Please enter a valid bid amount.";
     return;
   }
 
@@ -35,7 +40,7 @@ bidForm.addEventListener("submit", function(event) {
   };
 
   bids.push(newBid);
-  localStorage.setItem("artBids", JSON.stringify(bids));
+  localStorage.setItem("artBidsFresh", JSON.stringify(bids));
 
   bidderNameInput.value = "";
   bidAmountInput.value = "";
