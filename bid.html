@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Bidding | L’Éclaireur des Cités</title>
+  <link rel="stylesheet" href="main.css?v=8">
+  <link rel="stylesheet" href="bid.css?v=1">
+</head>
+<body>
+
+  <header>
+    <h1>L’Éclaireur des Cités</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#collection">Collection</a>
+      <a href="about.html">About</a>
+      <a href="game.html">Game</a>
+      <a href="survey.html">Survey</a>
+      <a href="bid.html">Bid</a>
+    </nav>
+  </header>
+
+  <section class="bid-page">
+    <div class="bid-box">
+
+      <div class="bid-art">
+        <img src="IMG_2458.jpeg" alt="Fall tree artwork">
+      </div>
+
+      <div class="bid-info">
+        <p class="season">Art Auction</p>
+        <h2>Skeleton Tree Painting</h2>
+
+        <p class="description">
+          This original artwork connects to the fall and bone theme of L’Éclaireur des Cités.
+          The tree represents autumn, decay, structure, and the hidden skeleton-like shape of nature.
+        </p>
+
+        <div class="current-bid">
+          <h3>Current Highest Bid</h3>
+          <p id="highestBid">$0</p>
+          <p id="highestBidder">No bids yet</p>
+        </div>
+
+        <form id="bidForm">
+          <label for="bidderName">Your Name</label>
+          <input type="text" id="bidderName" placeholder="Enter your name" required>
+
+          <label for="bidAmount">Your Bid</label>
+          <input type="number" id="bidAmount" placeholder="Enter bid amount" min="1" required>
+
+          <button type="submit">Place Bid</button>
+        </form>
+
+        <p id="bidMessage"></p>
+
+        <div class="bid-history">
+          <h3>Bid History</h3>
+          <ul id="bidList"></ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="bid.js?v=1"></script>
+</body>
+</html>
