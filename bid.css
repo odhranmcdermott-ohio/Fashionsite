@@ -169,3 +169,19 @@
     font-size: 42px;
   }
 }
+#resetBids {
+  margin-top: 15px;
+  width: 100%;
+  background: #171717;
+  color: #d9894f;
+  border: 1px solid #5b3a2e;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#resetBids:hover {
+  background: #261a16;
+  color: #f3e9dc;
+}
