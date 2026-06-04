@@ -30,7 +30,7 @@ header {
 
 header h1 {
   font-size: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: #f3e9dc;
 }
 
@@ -45,14 +45,14 @@ nav a:hover {
   color: #c86c35;
 }
 
-/* HERO */
+/* HOME HERO */
 .hero {
   min-height: 100vh;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.72)),
     url("/Fashionsite/IMG_2442.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -104,30 +104,19 @@ nav a:hover {
   background: #e08345;
 }
 
-/* ABOUT + COLLECTION */
-.about,
+/* COLLECTION */
 .collection {
   padding: 85px 50px;
   text-align: center;
   background: #0b0b0b;
 }
 
-.about h2,
 .collection h2 {
   font-size: 44px;
   margin-bottom: 22px;
   color: #f3e9dc;
 }
 
-.about p {
-  max-width: 850px;
-  margin: auto;
-  font-size: 20px;
-  line-height: 1.8;
-  color: #d7c2b3;
-}
-
-/* COLLECTION CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -138,9 +127,10 @@ nav a:hover {
 .card {
   background: #171717;
   border: 1px solid #5b3a2e;
-  padding: 35px 22px;
+  padding-bottom: 30px;
   min-height: 170px;
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -151,7 +141,7 @@ nav a:hover {
 
 .card h3 {
   font-size: 25px;
-  margin-bottom: 14px;
+  margin: 18px 18px 14px;
   color: #f3e9dc;
 }
 
@@ -159,62 +149,31 @@ nav a:hover {
   font-size: 16px;
   line-height: 1.6;
   color: #d7c2b3;
+  padding: 0 20px;
 }
 
-/* FOOTER */
-footer {
-  background: #050505;
-  padding: 28px;
-  text-align: center;
-  color: #9d8c81;
-  border-top: 1px solid #3b2b24;
+.piece-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-/* MOBILE */
-@media screen and (max-width: 900px) {
-  header {
-    flex-direction: column;
-    gap: 12px;
-    padding: 18px 20px;
-  }
-
-  header h1 {
-    font-size: 23px;
-    text-align: center;
-  }
-
-  nav {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 15px;
-  }
-
-  .hero {
-    padding: 160px 28px 80px;
-  }
-
-  .hero-text {
-    padding: 25px;
-  }
-
-  .hero h2 {
-    font-size: 42px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.piece-link span {
+  display: inline-block;
+  margin-top: 18px;
+  color: #c86c35;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
+
+.piece-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid #5b3a2e;
+}
+
 /* ABOUT PAGE */
 .about-page {
   min-height: 100vh;
@@ -279,51 +238,6 @@ footer {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 900px) {
-  .about-page {
-    padding: 160px 25px 60px;
-  }
-
-  .about-box {
-    padding: 30px;
-  }
-
-  .about-box h2 {
-    font-size: 38px;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* CLICKABLE COLLECTION CARDS */
-.piece-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.piece-link span {
-  display: inline-block;
-  margin-top: 18px;
-  color: #c86c35;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.piece-placeholder {
-  height: 180px;
-  border: 1px dashed #8a5a3f;
-  background: linear-gradient(135deg, #211714, #0b0b0b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #d9894f;
-  letter-spacing: 3px;
-  font-size: 14px;
-  margin-bottom: 22px;
-}
-
 /* INDIVIDUAL PIECE PAGES */
 .piece-page {
   min-height: 100vh;
@@ -337,7 +251,7 @@ footer {
 }
 
 .piece-box {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
   background: rgba(10, 10, 10, 0.86);
   border: 1px solid #5b3a2e;
@@ -346,23 +260,17 @@ footer {
 
 .piece-layout {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 40px;
   align-items: start;
 }
 
-.big-placeholder {
-  min-height: 520px;
-  border: 1px dashed #8a5a3f;
-  background: linear-gradient(135deg, #241915, #0b0b0b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #d9894f;
-  font-size: 18px;
-  letter-spacing: 4px;
-  text-align: center;
-  padding: 30px;
+.big-piece-img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #5b3a2e;
 }
 
 .piece-info h2 {
@@ -393,24 +301,82 @@ footer {
   font-weight: bold;
 }
 
+/* FOOTER */
+footer {
+  background: #050505;
+  padding: 28px;
+  text-align: center;
+  color: #9d8c81;
+  border-top: 1px solid #3b2b24;
+}
+
+/* MOBILE */
 @media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 20px;
+  }
+
+  header h1 {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .hero {
+    padding: 160px 28px 80px;
+    background-position: center center;
+  }
+
+  .hero-text {
+    padding: 25px;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page,
   .piece-page {
     padding: 160px 25px 60px;
   }
 
+  .about-box,
   .piece-box {
     padding: 30px;
   }
 
+  .about-box h2,
+  .piece-info h2 {
+    font-size: 38px;
+  }
+
+  .info-grid,
   .piece-layout {
     grid-template-columns: 1fr;
   }
 
-  .big-placeholder {
-    min-height: 300px;
-  }
-
-  .piece-info h2 {
-    font-size: 38px;
+  .big-piece-img {
+    max-height: 450px;
   }
 }
