@@ -5,6 +5,7 @@ const highestBidText = document.getElementById("highestBid");
 const highestBidderText = document.getElementById("highestBidder");
 const bidMessage = document.getElementById("bidMessage");
 const bidList = document.getElementById("bidList");
+const resetBidsButton = document.getElementById("resetBids");
 
 let bids = JSON.parse(localStorage.getItem("artBidsFresh")) || [];
 
@@ -16,8 +17,6 @@ bidForm.addEventListener("submit", function(event) {
   const bidderName = bidderNameInput.value.trim();
   const bidAmount = parseFloat(bidAmountInput.value);
 
-  const highestBid = getHighestBid();
-
   if (bidderName === "") {
     bidMessage.textContent = "Please enter your name.";
     return;
@@ -25,11 +24,6 @@ bidForm.addEventListener("submit", function(event) {
 
   if (isNaN(bidAmount) || bidAmount <= 0) {
     bidMessage.textContent = "Please enter a valid bid amount.";
-    return;
-  }
-
-  if (bidAmount <= highestBid) {
-    bidMessage.textContent = `Your bid must be higher than $${highestBid}.`;
     return;
   }
 
@@ -49,13 +43,16 @@ bidForm.addEventListener("submit", function(event) {
   displayBids();
 });
 
-function getHighestBid() {
-  if (bids.length === 0) {
-    return 0;
-  }
+resetBidsButton.addEventListener("click", function() {
+  const confirmReset = confirm("Are you sure you want to reset all bids?");
 
-  return Math.max(...bids.map(bid => bid.amount));
-}
+  if (confirmReset) {
+    bids = [];
+    localStorage.removeItem("artBidsFresh");
+    bidMessage.textContent = "Bid history has been reset.";
+    displayBids();
+  }
+});
 
 function displayBids() {
   bidList.innerHTML = "";
