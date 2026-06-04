@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Bidding | O’Rineveer</title>
-  <link rel="stylesheet" href="main.css?v=8">
-  <link rel="stylesheet" href="bid.css?v=1">
+  <link rel="stylesheet" href="main.css?v=12">
+  <link rel="stylesheet" href="bid.css?v=3">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
         </p>
 
         <div class="current-bid">
-          <h3>Current Highest Bid</h3>
+          <h3>Highest Bid So Far</h3>
           <p id="highestBid">$0</p>
           <p id="highestBidder">No bids yet</p>
         </div>
@@ -53,6 +53,8 @@
           <button type="submit">Place Bid</button>
         </form>
 
+        <button id="resetBids" type="button">Reset Bid History</button>
+
         <p id="bidMessage"></p>
 
         <div class="bid-history">
@@ -64,6 +66,6 @@
     </div>
   </section>
 
-  <script src="bid.js?v=2"></script>
+  <script src="bid.js?v=3"></script>
 </body>
 </html>
