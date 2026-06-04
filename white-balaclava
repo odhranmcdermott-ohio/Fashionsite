@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Skull Balaclava | O’Rineveer</title>
+  <link rel="stylesheet" href="main.css?v=11">
+</head>
+<body>
+
+<header>
+  <h1>O’Rineveer</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#collection">Collection</a>
+    <a href="about.html">About</a>
+    <a href="game.html">Game</a>
+    <a href="survey.html">Survey</a>
+    <a href="bid.html">Bid</a>
+  </nav>
+</header>
+
+<section class="piece-page">
+  <div class="piece-box">
+    <div class="piece-layout">
+
+      <img class="big-piece-img" src="IMG_1317.jpeg" alt="White Skull Balaclava">
+
+      <div class="piece-info">
+        <p class="season">Balaclava Piece</p>
+        <h2>White Skull Balaclava</h2>
+
+        <p>
+          The White Skull Balaclava uses a lighter base with bold skull-like markings.
+          It feels colder and more ghostlike than the black version while still keeping the same
+          mysterious identity.
+        </p>
+
+        <h3>Design Concept</h3>
+        <p>
+          The white base makes the skull design more visible and striking. The painted areas around
+          the face create the feeling of a mask or skull face.
+        </p>
+
+        <h3>Theme Connection</h3>
+        <p>
+          This piece connects directly to bones, skulls, and winter. The white color makes the design
+          feel closer to actual bone, while the darker details add contrast.
+        </p>
+
+        <h3>Why It Matters</h3>
+        <p>
+          The white balaclava adds contrast to the collection. It gives the brand a brighter but still
+          eerie piece that works with both sweaters.
+        </p>
+
+        <a class="back-link" href="index.html#collection">← Back to Collection</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
